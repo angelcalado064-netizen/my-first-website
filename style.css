@@ -1,110 +1,175 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
-    background: #000;
-    color: #fff;
+    font-family: 'Playfair Display', Garamond, serif;
+    background: url('content://com.android.providers.media.documents/document/image%3A1000028097') center/cover no-repeat fixed;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
 }
 
 .card {
     width: 88%;
     max-width: 350px;
-    background: #fff;
-    color: #111;
-    padding: 35px 25px;
-    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.4);
+    color: #ffffff;
+    padding: 40px 25px;
+    border-radius: 24px;
     text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .heart {
-    font-size: 42px;
-    margin-bottom: 10px;
+    font-size: 48px;
+    margin-bottom: 12px;
+    color: #ffffff;
 }
 
 h1 {
-    margin: 0;
-    font-size: 23px;
+    font-size: 24px;
     font-weight: 600;
+    margin-bottom: 8px;
+    color: #ffffff;
+    letter-spacing: 1px;
 }
 
 .subtitle {
-    margin: 10px 0 25px;
-    font-size: 13px;
-    color: #777;
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-style: italic;
 }
 
 .dots {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 25px;
+    gap: 12px;
+    margin-bottom: 30px;
 }
 
 .dot {
-    width: 11px;
-    height: 11px;
-    border: 1.5px solid #111;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #ffffff;
     border-radius: 50%;
+    transition: all 0.25s ease;
 }
 
 .dot.filled {
-    background: #111;
+    background: #ffffff;
+    border-color: #ffffff;
 }
 
 .keypad {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 12px;
 }
 
 .key {
-    height: 55px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    background: #fafafa;
-    font-size: 18px;
+    height: 58px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(4px);
+    font-family: 'Playfair Display', Garamond, serif;
 }
 
 .key:active {
-    background: #111;
-    color: #fff;
+    background-color: #000000;
+    color: #ffffff;
     transform: scale(0.95);
 }
 
 .clear {
-    color: #777;
+    color: #ffffff;
 }
 
 .enter {
-    background: #111;
-    color: #fff;
-    border-color: #111;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-color: #000;
+    color: #ffffff;
 }
 
 .message {
-    min-height: 18px;
-    margin-top: 18px;
-    font-size: 13px;
+    min-height: 20px;
+    margin-top: 22px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffffff;
 }
 
 .wrong {
-    color: #777;
+    color: #ffffff;
 }
 
 .correct {
-    color: #111;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .footer {
-    margin-top: 25px;
-    font-size: 10px;
-    color: #aaa;
+    margin-top: 28px;
+    font-size: 11px;
+    color: #ffffff;
     letter-spacing: 2px;
+}
+
+.success-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    padding: 20px 25px; /* mas maikli sa taas/baba, sakto sa gilid */
+    width: 260px; /* nakatakdang lapad → nagiging square/maikling rectangle */
+    text-align: center;
+    z-index: 10;
+}
+
+
+.success-content h2 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.success-content img {
+    width: 90px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.success-content p {
+    font-size: 14px;
+    color: #ffffff;
+    opacity: 0.9;
 }
