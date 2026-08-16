@@ -2,65 +2,162 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>A Little Surprise</title>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Private System</title>
 
     <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
 </head>
+
 
 <body>
 
-    <div class="card">
 
-        <div class="heart">♡</div>
+    <div class="container" id="mainContainer">
 
-        <h1>A Little Surprise</h1>
+        <div class="system-title">
+            PRIVATE SYSTEM
+        </div>
+
+
+        <h1>
+            ACCESS REQUIRED
+        </h1>
+
 
         <p class="subtitle">
-            Enter our special date
+            ENTER THE PASSWORD TO CONTINUE
         </p>
 
-        <div class="dots">
-            <div class="dot" id="dot1"></div>
-            <div class="dot" id="dot2"></div>
-            <div class="dot" id="dot3"></div>
-            <div class="dot" id="dot4"></div>
-            <div class="dot" id="dot5"></div>
-            <div class="dot" id="dot6"></div>
-        </div>
 
-        <div class="keypad">
+        <input
+            type="password"
+            id="password"
+            placeholder="PASSWORD"
+            autocomplete="off"
+        >
 
-            <button class="key" onclick="press(1)">1</button>
-            <button class="key" onclick="press(2)">2</button>
-            <button class="key" onclick="press(3)">3</button>
 
-            <button class="key" onclick="press(4)">4</button>
-            <button class="key" onclick="press(5)">5</button>
-            <button class="key" onclick="press(6)">6</button>
+        <button id="enterButton">
+            ENTER
+        </button>
 
-            <button class="key" onclick="press(7)">7</button>
-            <button class="key" onclick="press(8)">8</button>
-            <button class="key" onclick="press(9)">9</button>
 
-            <button class="key clear" onclick="clearPin()">⌫</button>
-            <button class="key" onclick="press(0)">0</button>
-            <button class="key enter" onclick="unlock()">✓</button>
+        <div id="message"></div>
 
-        </div>
 
-        <div class="message" id="message"></div>
-
-        <div class="footer">
-            MADE WITH LOVE
+        <div class="status">
+            SYSTEM STAT=US: ONLINE
         </div>
 
     </div>
+    
+    <!-- K — KEEP -->
+<section id="keepPage" class="memory-screen" hidden>
 
-    <script src="scrip.js"></script>
+    <div class="memory-status">MEMORY FILE K_01</div>
+
+    <div class="memory-title">KEEP</div>
+
+    <div class="memory-subtitle">
+    </div>
+
+    <div class="memory-gallery">
+
+<div class="memory-gallery">
+
+    <div class="memory-card">
+        <img src="image/sunset.jpg" alt="Sunset">
+        <div class="memory-caption">
+            A view I want to see with you someday.
+        </div>
+    </div>
+
+    <div class="memory-card">
+        <img src="/image/wedding.jpeg" alt="Wedding">
+        <div class="memory-caption">
+            A day I hope we get to call ours.
+        </div>
+    </div>
+
+    <div class="memory-card">
+        <img src="image/house.jpg" alt="Dream House">
+        <div class="memory-caption">
+            A home I dream of building with you.
+        </div>
+    </div>
+
+    <div class="memory-card">
+        <img src="/image/cat.jpeg" alt="Cat">
+        <div class="memory-caption">
+            A little part of the life I want to share with you.
+        </div>
+    </div>
+
+</div>
+    </div>
+
+    <button class="memory-back" onclick="showHome()">
+        ← BACK
+    </button>
+
+</section>
+
+<section id="homePage" class="home-screen" hidden>
+
+    <div class="home-label">FILE H_01</div>
+
+    <h1 class="home-title">HOME</h1>
+
+    <div class="home-line"></div>
+
+    <div class="home-image">
+        <img src="image/house.jpg" alt="Our future home">
+    </div>
+
+    <p class="home-quote">
+        WHEREVER YOU ARE, THAT'S WHERE MY HEART FEELS HOME.
+    </p>
+
+    <div class="home-message">
+        Kahit malayo tayo sa isa't isa, ikaw pa rin yung taong
+        nagbibigay sakin ng feeling na parang nasa bahay lang ako.
+        <br><br>
+
+        Gusto ko yung araw na pwede na kitang puntahan, makasama,
+        at makauwi sayo. Yung hindi na natin kailangang sabihin
+        na "i miss youu baby" kasi magkatabi na tayo.
+        <br><br>
+
+        Someday, I want us to have our own little home. Hindi kailangan maging perfect sobrang laki. Basta kasama kita. Yung may mga simpleng araw na paglulutuan mo ako, manonood tayo ng movies, magkukulitan, mag-aaway sa maliliit na bagay tapos magbabati rin HAHAHAHAHAHA, and just enjoy having each other around.
+        <br><br>
+
+        Gusto kong dumating yung time na yung mga bagay inii-imagine lang natin ngayon, magiging normal na part ng everyday life natin. Yung paggising at pagtulog na hindi na kailangan ng screen between us.
+        <br><br>
+
+        <b>Because for me, home isn't really a place. It's you.</b>
+    </div>
+
+    <button class="home-back" onclick="showHome()">
+        ← BACK
+    </button>
+
+</section>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 
 </body>
 
-    </html>
+</html>
