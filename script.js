@@ -426,7 +426,7 @@ function showMemoryGallery() {
 function startMemoryMusic() {
 
     const song =
-        new Audio("/I'd rather.mp3");
+        new Audio("Mornings-Whisper.mp3");
 
     song.volume = 0.65;
 
