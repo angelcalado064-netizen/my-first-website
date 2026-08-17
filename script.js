@@ -1166,7 +1166,7 @@ i love youu always, my love.
                 </div>
 
                 <div class="letter-heart">
-                    ♥ ♥ ♥
+                    🫶🫶🫶
                 </div>
 
             </div>
@@ -1208,7 +1208,7 @@ function showInfinite() {
           <br><br>
           Mahal kita sa mga araw na masaya tayo, sa mga araw na namimiss kita, sa mga araw na nagkakaintindihan tayo, at kahit sa mga araw na hindi tayo okay.
           <br><br>
-          Mahal kita hindi dahil perfect ka, but because <b>you're you.</b>
+          Mahal kita hindi dahil perfect ka, kasi <b>ikaw yan eh.</b>
           <br><br>
           Kahit gaano pa katagal, kahit ilang distance pa ang kailangan nating lampasan, I hope you always remember that my love for you will always have no ending.
           <br><br>
@@ -1509,7 +1509,11 @@ function createAlwaysScene() {
         "i miss youu 💘",
         "my safe space 🕊️",
         "mahal kitaa sobra 🥹",
-        "happy anniversary 🎉"
+        "happy anniversary 🎉",
+        "my wife 🫰",
+        "baby koo 🫠",
+        "kishiamae 🥵"
+
     ];
 
     const wordSprites = [];
